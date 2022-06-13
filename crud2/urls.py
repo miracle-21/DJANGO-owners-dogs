@@ -17,7 +17,8 @@ Including another URLconf
 from django.urls import path, include
 
 urlpatterns = [
-    path('owners', include('owners.urls')),
-
+    path('owners', include('owners.urls')), # http://127.0.0.1:8000/owners 주소를 요청하면 owners.url로 이동(owners 앱에 있는 url로 이동)
+    #api에 없는 주소면 not found 예)http://127.0.0.1:8000/users
+    # path('movies', include('movies.urls')),
 ]
 
